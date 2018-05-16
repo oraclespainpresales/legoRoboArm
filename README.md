@@ -53,6 +53,6 @@ ps -al
 
 and search the defunc process, take note of PPID field
 
-kill -9 <PPID>
+kill -9 PPID
 
 All defunc process with the same PPID will be killed
