@@ -29,7 +29,7 @@ To install web.py and tornado:
 - sudo pip install tornado
 
 Additional resources: 
-
+---------------------
 I'm coding this two programs with pyCharm Jetbrains IDE. You can get it for free at: www.jetbrains.com/PyCharm
 
 More information about lego EV3 development at http://www.ev3dev.org/
@@ -56,3 +56,12 @@ and search the defunc process, take note of PPID field
 kill -9 PPID
 
 All defunc process with the same PPID will be killed
+
+WEB SERVER Commands:
+--------------------
+
+Lego ev3 controller shows you the ip address. You can get postman at https://www.getpostman.com/ to send commands to the robo arm. 
+
+- GET type: ip_address/initialize/ ---> First command to initialize the robo arm
+- GET type: ip_address/move_start/ ---> infinite movement command. You can stop movement pressing backspace button (ev3 controller) or reaching the max temperature in the temperature sensor. Robo arm detects a fail and stop movement.
+- GET type: ip_address/move_stop/  ---> stop the robo arms and reset the sensors and motors. You must to send an initialize command after a stop command. If you sent move_start command (infinite movement) stop or initialize commands will not work until infinite movement ends (failure detected).
