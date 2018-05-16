@@ -39,10 +39,20 @@ In this website you can get a new firmware to change lego ev3 firmware with ev3d
 In ev3dev.org you can get instructions to configure a dev environmet (git) with python, ev3dev firmware and pycharm
 
 To execute the python scripts you must copy them in the ev3 controller.
+You can access to the linux jessie of ev3 controller with putty.
+
+- User: robot
+- pass: maker
+
 Next chmod +x <script_name>.py
 Next python3 <script_name>.py
 
 If you exit the script with CTRL+Z, webserver and two process could get defunc state. To avoid memory leaks or problem with defunc process you culd execute:
 
-ps -al and search the defunc process, take note of PPID field
-kill -9 PPID (all defunc process with the same PPID will be killed)
+ps -al 
+
+and search the defunc process, take note of PPID field
+
+kill -9 <PPID>
+
+All defunc process with the same PPID will be killed
