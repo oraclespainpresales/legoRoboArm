@@ -44,6 +44,8 @@ You can access to the linux jessie of ev3 controller with putty.
 - User: robot
 - pass: maker
 
+![Putty ev3dev](images/Capture%20Putty%20roboarm.PNG)
+
 - Next chmod +x <script_name>.py
 - Next python3 <script_name>.py
 
@@ -60,8 +62,11 @@ All defunc process with the same PPID will be killed
 WEB SERVER Commands:
 --------------------
 
-Lego ev3 controller shows you the ip address. You can get postman at https://www.getpostman.com/ to send commands to the robo arm. 
+Lego ev3 controller shows you the ip address. You can get postman at https://www.getpostman.com/ to send commands to the robo arm. Default port is **8080**
 
-- GET type: ip_address/initialize/ ---> First command to initialize the robo arm
-- GET type: ip_address/move_start/ ---> infinite movement command. You can stop movement pressing backspace button (ev3 controller) or reaching the max temperature in the temperature sensor. Robo arm detects a fail and stop movement.
-- GET type: ip_address/move_stop/  ---> stop the robo arms and reset the sensors and motors. You must to send an initialize command after a stop command. If you sent move_start command (infinite movement) stop or initialize commands will not work until infinite movement ends (failure detected).
+- GET type: ip_address:8080/initialize/ ---> First command to initialize the robo arm
+
+![Postman and Initialize command](images/Capture%20postman%20initialize.PNG)
+
+- GET type: ip_address:8080/move_start/ ---> infinite movement command. You can stop movement pressing backspace button (ev3 controller) or reaching the max temperature in the temperature sensor. Robo arm detects a fail and stop movement.
+- GET type: ip_address:8080/move_stop/  ---> stop the robo arms and reset the sensors and motors. You must to send an initialize command after a stop command. If you sent move_start command (infinite movement) stop or initialize commands will not work until infinite movement ends (failure detected).
