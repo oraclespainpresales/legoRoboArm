@@ -13,6 +13,7 @@ To run this project you'll need:
 
 - A lego mindstorm EV3 H25 roboarm (build instructions on http://robotsquare.com/wp-content/uploads/2013/10/45544_robotarmh25.pdf)
 - Wifi dondle for EV3 controller (wifi enable)
+- Temperature sensor to simulate a roboarm failure
 - web.py libraries for web.py version
 - tornado libraries for tornado version
 
@@ -24,13 +25,24 @@ in Debian Jessie: sudo apt-get install python-pip
 
 To install web.py and tornado:
 
-- pip install web.py
-- pip install tornado
+- sudo pip install web.py
+- sudo pip install tornado
 
 Additional resources: 
 
-I was coding this two programs with pyCharm Jetbrains IDE. You can get it for free at: www.jetbrains.com/PyCharm
+I'm coding this two programs with pyCharm Jetbrains IDE. You can get it for free at: www.jetbrains.com/PyCharm
 
 More information about lego EV3 development at http://www.ev3dev.org/
-In this website you can change ev3 firmware with ev3dev firmware (more functionalities and languajes). 
+
+In this website you can get a new firmware to change lego ev3 firmware with ev3dev firmware (more functionalities and languajes, including python 3.4 version).
+
 In ev3dev.org you can get instructions to configure a dev environmet (git) with python, ev3dev firmware and pycharm
+
+To execute the python scripts you must copy them in the ev3 controller.
+Next chmod +x <script_name>.py
+Next python3 <script_name>.py
+
+If you exit the script with CTRL+Z, webserver and two process could get defunc state. To avoid memory leaks or problem with defunc process you culd execute:
+
+ps -al and search the defunc process, take note of PPID field
+kill -9 PPID (all defunc process with the same PPID will be killed)
