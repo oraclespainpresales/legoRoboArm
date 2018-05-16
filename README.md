@@ -46,8 +46,9 @@ You can access to the linux jessie of ev3 controller with putty.
 
 ![Putty ev3dev](images/Capture%20Putty%20roboarm.PNG)
 
-- Next chmod +x <script_name>.py
-- Next python3 <script_name>.py
+To execute the script:
+- chmod +x <script_name>.py
+- python3 <script_name>.py
 
 If you exit the script with CTRL+Z, webserver and two process could get defunc state. To avoid memory leaks or problem with defunc process you culd execute:
 
