@@ -3,8 +3,8 @@ python 3.4 code for lego mondstorm ev3 H25 roboArm.
 
 Two codes available:
 
-legoroboarmweb.py ---> python code with web.py webserver to send commands to roboarm
-legoroboarmtornado.py --> python code with tornado webserver to send commands to roboarm. 
+- legoroboarmweb.py ---> python code with web.py webserver to send commands to roboarm
+- legoroboarmtornado.py --> python code with tornado webserver to send commands to roboarm. 
 
 Web.py is a blocking webserver and API coded in python. http://webpy.org
 Tornado is a non-blocking webserver and API coded in python. http://www.tornadoweb.org/en/stable/#
@@ -44,16 +44,16 @@ You can access to the linux jessie of ev3 controller with putty.
 - User: robot
 - pass: maker
 
-Next chmod +x <script_name>.py
-Next python3 <script_name>.py
+- Next chmod +x <script_name>.py
+- Next python3 <script_name>.py
 
 If you exit the script with CTRL+Z, webserver and two process could get defunc state. To avoid memory leaks or problem with defunc process you culd execute:
 
-ps -al 
+- ps -al 
 
 and search the defunc process, take note of PPID field
 
-kill -9 PPID
+- kill -9 PPID
 
 All defunc process with the same PPID will be killed
 
