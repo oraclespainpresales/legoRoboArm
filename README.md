@@ -34,11 +34,13 @@ To run this project you'll need:
 
 For Raspberry pi3 + BrickPi version you need additional lego bricks. (be acreative and adapt it at your needs).
 
-![brickpi3 modification](images/brickpi3_01.PNG)
+![brickpi3 modification](images/brickpi3_01.jpg)
 
-![brickpi3 modification](images/brickpi3_02.PNG)
+![brickpi3 modification](images/brickpi3_02.jpg)
 
-![brickpi3 modification](images/brickpi3_03.PNG)
+![brickpi3 modification](images/brickpi3_03.jpg)
+
+![brickpi3 modification](images/brickpi3_04.jpg)
 
 To install web and tornado libraries you must installed pip in you python environment. You can use pip or pip3
 to install pip or pip3:
