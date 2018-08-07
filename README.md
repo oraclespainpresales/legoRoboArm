@@ -34,11 +34,11 @@ To run this project you'll need:
 
 For Raspberry pi3 + BrickPi version you need additional lego bricks. (be acreative and adapt it at your needs).
 
-(images/brickpi3_01.PNG)
+![brickpi3 modification](images/brickpi3_01.PNG)
 
-(images/brickpi3_02.PNG)
+![brickpi3 modification](images/brickpi3_02.PNG)
 
-(images/brickpi3_03.PNG)
+![brickpi3 modification](images/brickpi3_03.PNG)
 
 To install web and tornado libraries you must installed pip in you python environment. You can use pip or pip3
 to install pip or pip3:
@@ -51,20 +51,24 @@ To install web.py and tornado:
 - sudo pip install web.py
 - sudo pip install tornado
 
+other libraries:
+
+- sudo pip install requests
+
 Additional resources: 
 ---------------------
-I'm coding these three python files with pyCharm Jetbrains IDE. You can get it for free at: www.jetbrains.com/PyCharm
+This python files was coding with pyCharm Jetbrains IDE. You can get it for free at: www.jetbrains.com/PyCharm
 
 More information about lego EV3 development at http://www.ev3dev.org/
 
 In that website you can get a new firmware to change lego ev3 firmware with ev3dev firmware (more functionalities and languajes, including python 3.4 version for lego ev3 and python 3.5.2 for raspberry pi3 - debian stretch).
 
-Raspberry pi3 lastest sd SO images - https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/
+Raspberry pi3 lastest debian stretch images - https://oss.jfrog.org/list/oss-snapshot-local/org/ev3dev/brickstrap/
 
 In ev3dev.org you can get instructions to configure a dev environmet (git) with python, ev3dev firmware and pycharm
 
 To execute the python scripts you must copy them in the ev3 controller or Raspberry pi3.
-You can access to the linux jessie/stretch of ev3 controller/raspberry pi with putty.
+You can remote access to the linux jessie/stretch of ev3 controller/raspberry pi with putty.
 
 - User: robot
 - pass: maker
@@ -97,3 +101,12 @@ Lego ev3 controller shows you the ip address. You can get postman at https://www
 - GET type: ip_address:8080/move_start/ ---> infinite movement command. You can stop movement pressing backspace button (ev3 controller) or reaching the max temperature in the temperature sensor. Robo arm detects a fail and stop movement.
 - GET type: ip_address:8080/move_stop/  ---> stop the robo arms and reset the sensors and motors. You must to send an initialize command after a stop command. If you send move_start command (infinite movement) other move_start or initialize commands will not work until infinite movement ends (failure detected). if you send move_stop the arm will stop infinite movement too.
 - GET type: ip_address:8080/get_temperature/ ---> get the temperature from temperature sensor.
+
+LOG FILE:
+--------------------
+
+for additional information about the program running, you can review the roboarm.log file. You can change log detail inside the legoroboarmxxx.py script. Default detail is INFO (no debug information), but you can change to DEBUG to get more detailed information.
+
+![roboarm LOG](images/roboarmLOG.PNG)
+
+
