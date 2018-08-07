@@ -109,6 +109,6 @@ LOG FILE:
 
 for additional information about the program running, you can review the roboarm.log file. You can change log detail inside the legoroboarmxxx.py script. Default detail is INFO (no debug information), but you can change to DEBUG to get more detailed information.
 
-![roboarm LOG](images/Capture roboarmLOG.PNG)
+![roboarm LOG](images/Capture%20roboarmLOG.PNG)
 
 
