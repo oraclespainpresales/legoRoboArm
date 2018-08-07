@@ -379,8 +379,14 @@ class LegoRoboArm:
                     self.stop_event.wait(1)
             else:
                 logger.info("INFINITE_MOVEMENT] Started with TEMP SENSOR.")
-                while not self.stop_event.is_set() and int(self.temperature_sensor.value()) < TEMP_LIMIT:
+                while not self.stop_event.is_set() and (int(self.temperature_sensor.value()) < TEMP_LIMIT):
+                    logger.debug("[INFINITE_MOVEMENT] loop temperature: " + str(self.temperature_sensor.value())
+                                 + " temp limit: " + str(TEMP_LIMIT)
+                                 + " temp<temp_limit: " + str(int(self.temperature_sensor.value()) < TEMP_LIMIT))
                     self.stop_event.wait(1)
+                logger.debug("[INFINITE_MOVEMENT] loop temperature: " + str(self.temperature_sensor.value())
+                             + " temp limit: " + str(TEMP_LIMIT)
+                             + " temp<temp_limit: " + str(int(self.temperature_sensor.value()) < TEMP_LIMIT))
             if self.pro is not None:
                 self.pro.terminate()
                 self.stop()
