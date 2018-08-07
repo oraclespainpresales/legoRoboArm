@@ -111,4 +111,12 @@ for additional information about the program running, you can review the roboarm
 
 ![roboarm LOG](images/Capture%20roboarmLOG.PNG)
 
+To change log detail level, you can change it in the script:
+
+# init logger... change logging.DEBUG to increase or decrease log details.
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='roboarm.log',
+                    level=logging.DEBUG,
+                    filemode='w',
+                    format='%(asctime)s %(levelname)8s: %(message)s')
 
